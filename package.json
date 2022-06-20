@@ -23,5 +23,8 @@
     "test": "test"
   },
   "author": "Hono Shirai",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@geolonia/japanese-numeral": "^0.1.16"
+  }
 }
