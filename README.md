@@ -1,5 +1,7 @@
 # textlint-rule-kansuji-number
 
+WIP
+
 check number with kanji
 
 ## Install
