@@ -1,4 +1,4 @@
-# textlint-rule-kansuji
+# textlint-rule-kansuji-number
 
 check number with kanji
 
@@ -6,7 +6,7 @@ check number with kanji
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install textlint-rule-kansuji
+    npm install textlint-rule-kansuji-number
 
 ## Usage
 
@@ -15,7 +15,7 @@ Via `.textlintrc`(Recommended)
 ```json
 {
     "rules": {
-        "kansuji": true
+        "kansuji-number": true
     }
 }
 ```
@@ -23,7 +23,7 @@ Via `.textlintrc`(Recommended)
 Via CLI
 
 ```
-textlint --rule kansuji README.md
+textlint --rule kansuji-number README.md
 ```
 
 ### Build
@@ -42,4 +42,4 @@ Test textlint rule by [textlint-tester](https://github.com/textlint/textlint-tes
 
 ## License
 
-ISC © Hono Shirai
+MIT © Hono Shirai
