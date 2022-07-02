@@ -36,7 +36,7 @@ tester.run("rule", rule, {
                 {
                     message: "Found bugs.",
                     line: 3,
-                    column: 3
+                    column: 4
                 }
             ]
         },
