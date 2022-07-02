@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "textlint-scripts": "^12.0.2",
-    "textlint-tester": "^12.0.2"
+    "textlint-tester": "^12.2.1"
   },
   "name": "textlint-rule-kansuji-number",
   "description": "check number with kanji",
