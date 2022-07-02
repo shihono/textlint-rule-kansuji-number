@@ -6,7 +6,7 @@ check number with kanji
 
 ## Install
 
-Install with [npm](https://www.npmjs.com/):
+~~Install with [npm](https://www.npmjs.com/):~~
 
     npm install textlint-rule-kansuji-number
 
