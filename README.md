@@ -17,7 +17,10 @@ Via `.textlintrc`(Recommended)
 ```json
 {
     "rules": {
-        "kansuji-number": true
+        "kansuji-number": {
+            "allowKansuji": false
+            // "allowFigure": false
+        }
     }
 }
 ```
@@ -27,6 +30,11 @@ Via CLI
 ```
 textlint --rule kansuji-number README.md
 ```
+
+### Options
+
+- allowKansuji: `false` で漢数字を利用しているかチェックします
+- allowFigures: `false` でアラビア数字を利用しているかチェックします
 
 ### Build
 
@@ -38,7 +46,7 @@ You can write ES2015+ source codes in `src/` folder.
 ### Tests
 
 Run test code in `test` folder.
-Test textlint rule by [textlint-tester](https://github.com/textlint/textlint-tester).
+Test textlint rule by [textlint-tester](https://github.com/textlint/textlint/tree/master/packages/textlint-tester).
 
     npm test
 

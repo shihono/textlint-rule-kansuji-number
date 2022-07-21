@@ -14,7 +14,7 @@ tester.run("rule", rule, {
         {
             text: "一期一会の出会い。二人乗り自転車。",
             options: {
-                "prohibitKansuji": true,
+                "allowKansuji": false,
             },
 
         }
@@ -24,7 +24,7 @@ tester.run("rule", rule, {
         {
             text: "合計で10000億円になる。",
             options: {
-                "prohibitFigure": true,
+                "allowFigure": false,
             },
             errors: [
                 {
@@ -37,7 +37,7 @@ tester.run("rule", rule, {
         {
             text: "漢数字の十億円。",
             options: {
-                "prohibitKansuji": true,
+                "allowKansuji": false,
             },
             errors: [
                 {
@@ -51,7 +51,7 @@ tester.run("rule", rule, {
         {
             text: `70000兆。\n\n数字の80000万。`,
             options: {
-                "prohibitFigure": true,
+                "allowFigure": false,
             },
             errors: [
                 {

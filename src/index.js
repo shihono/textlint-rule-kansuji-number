@@ -1,17 +1,17 @@
 import { findKanjiNumbers, kanji2number } from '@geolonia/japanese-numeral'
 
 const defaultOptions = {
-    prohibitKansuji: false,
-    prohibitFigure: false
+    allowKansuji: true,
+    allowFigure: true
 };
 
 const regexKansuji = /[一二三四五六七八九十]/g;
-const regexFigures = /\d/g;
+const regexFigure = /\d/g;
 
 export default function(context, options = {}) {
     const {Syntax, RuleError, report, getSource} = context;
-    const prohibitKansuji = options.prohibitKansuji ? options.prohibitKansuji : defaultOptions.prohibitKansuji;
-    const prohibitFigure = options.prohibitFigure ? options.prohibitFigure : defaultOptions.prohibitFigure;
+    const allowKansuji = options.allowKansuji === false ? options.allowKansuji : defaultOptions.allowKansuji;
+    const allowFigure = options.allowFigure === false ? options.allowFigure : defaultOptions.allowFigure;
     return {
         [Syntax.Str](node){ // "Str" node
             const text = getSource(node); // Get text
@@ -28,11 +28,11 @@ export default function(context, options = {}) {
             for(const num of numbers){
                 // judge number
                 const kansujiIndex = num.search(regexKansuji);
-                const figureIndex = num.search(regexFigures);
-                if(prohibitKansuji===true&kansujiIndex>=0&kanji2number(num)>10){
+                const figureIndex = num.search(regexFigure);
+                if(allowKansuji===false&kansujiIndex>=0&kanji2number(num)>10){
                     report(node, getRuleError(num, "漢数字が含まれています"));
                 }
-                else if(prohibitFigure===true&figureIndex>=0){
+                else if(allowFigure===false&figureIndex>=0){
                     report(node, getRuleError(num, "アラビア数字が含まれています"));
                 }
             }
