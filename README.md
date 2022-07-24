@@ -18,7 +18,7 @@ Via `.textlintrc`(Recommended)
 {
     "rules": {
         "kansuji-number": {
-            "allowKansuji": false
+            "allowKansuji": false  // default to false
             // "allowFigure": false
         }
     }
@@ -33,7 +33,7 @@ textlint --rule kansuji-number README.md
 
 ### Options
 
-- allowKansuji: `false` で漢数字を利用しているかチェックします
+- allowKansuji: `false` で漢数字を利用しているかチェックします。デフォルトで `false` です。
 - allowFigures: `false` でアラビア数字を利用しているかチェックします
 
 ### Build

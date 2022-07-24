@@ -28,7 +28,7 @@ tester.run("rule", rule, {
             },
             errors: [
                 {
-                    message: "アラビア数字が含まれています",
+                    message: "アラビア数字が含まれています: 10000億",
                     line: 1,
                     column: 4
                 }
@@ -41,7 +41,7 @@ tester.run("rule", rule, {
             },
             errors: [
                 {
-                    message: "漢数字が含まれています",
+                    message: "漢数字が含まれています: 十億",
                     line: 1,
                     column: 5
                 }
@@ -56,12 +56,12 @@ tester.run("rule", rule, {
             },
             errors: [
                 {
-                    message: "アラビア数字が含まれています",
+                    message: "アラビア数字が含まれています: 70000兆",
                     line: 1,
                     column: 1
                 },
                 {
-                    message: "アラビア数字が含まれています",
+                    message: "アラビア数字が含まれています: 80000万",
                     line: 3,
                     column: 4
                 }

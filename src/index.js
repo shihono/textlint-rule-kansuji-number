@@ -30,10 +30,10 @@ export default function(context, options = {}) {
                 const kansujiIndex = num.search(regexKansuji);
                 const figureIndex = num.search(regexFigure);
                 if(allowKansuji===false&kansujiIndex>=0&kanji2number(num)>10){
-                    report(node, getRuleError(num, "漢数字が含まれています"));
+                    report(node, getRuleError(num, `漢数字が含まれています: ${num}`));
                 }
                 else if(allowFigure===false&figureIndex>=0){
-                    report(node, getRuleError(num, "アラビア数字が含まれています"));
+                    report(node, getRuleError(num, `アラビア数字が含まれています: ${num}`));
                 }
             }
         }      
