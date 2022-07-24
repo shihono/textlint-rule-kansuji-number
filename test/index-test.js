@@ -9,8 +9,8 @@ tester.run("rule", rule, {
         // no problem
         "text",
         "1200000",
-        "漢数字を含む1億円。",
-        "漢数字を含む十二億円。",
+        "漢数字を含まない1億円。",
+        // "漢数字を含む十二億円。",
         {
             text: "一期一会の出会い。二人乗り自転車。",
             options: {
@@ -49,8 +49,9 @@ tester.run("rule", rule, {
         },
         // multiple match
         {
-            text: `70000兆。\n\n数字の80000万。`,
+            text: `70000兆。\n\n数字の80000万。\n漢数字を含む十二億円。`,
             options: {
+                "allowKansuji": true,
                 "allowFigure": false,
             },
             errors: [

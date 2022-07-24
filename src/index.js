@@ -1,7 +1,7 @@
 import { findKanjiNumbers, kanji2number } from '@geolonia/japanese-numeral'
 
 const defaultOptions = {
-    allowKansuji: true,
+    allowKansuji: false,
     allowFigure: true
 };
 
@@ -10,8 +10,8 @@ const regexFigure = /\d/g;
 
 export default function(context, options = {}) {
     const {Syntax, RuleError, report, getSource} = context;
-    const allowKansuji = options.allowKansuji === false ? options.allowKansuji : defaultOptions.allowKansuji;
-    const allowFigure = options.allowFigure === false ? options.allowFigure : defaultOptions.allowFigure;
+    const allowKansuji = "allowKansuji" in options ? options.allowKansuji : defaultOptions.allowKansuji;
+    const allowFigure = "allowFigure" in options ? options.allowFigure : defaultOptions.allowFigure;
     return {
         [Syntax.Str](node){ // "Str" node
             const text = getSource(node); // Get text
