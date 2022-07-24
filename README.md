@@ -34,7 +34,31 @@ textlint --rule kansuji-number README.md
 ### Options
 
 - allowKansuji: `false` で漢数字を利用しているかチェックします。デフォルトで `false` です。
-- allowFigures: `false` でアラビア数字を利用しているかチェックします
+- allowFigure: `false` でアラビア数字を利用しているかチェックします
+
+#### Examples
+
+漢数字がNG
+```
+{ "allowKansuji": false, "allowFigure": true}
+
+// OK
+アラビア数字の10億円。
+// NG
+漢数字の十億円。
+```
+
+アラビア数字がNG
+
+```
+{ "allowKansuji": true, "allowFigure": false}
+
+// OK
+漢数字の十億円。
+// NG
+アラビア数字の10億円。
+```
+
 
 ### Build
 
