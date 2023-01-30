@@ -14,7 +14,7 @@
     "prepublish": "npm run --if-present build"
   },
   "devDependencies": {
-    "textlint-scripts": "^12.2.1",
+    "textlint-scripts": "^13.0.5",
     "textlint-tester": "^12.0.2"
   },
   "name": "textlint-rule-kansuji-number",
